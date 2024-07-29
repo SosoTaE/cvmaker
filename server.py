@@ -19,13 +19,16 @@ def home():
 def VerifyAccessToken():
     return verifyAccessToken()
 
+
 @app.route('/registration', methods=["POST"])
 def Registration():
     return registration()
 
+
 @app.route('/login', methods=["POST"])
 def Login():
     return login()
+
 
 @app.route('/refresh', methods=["POST"])
 def Refresh():
