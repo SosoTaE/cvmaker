@@ -2,6 +2,7 @@ import json
 
 from fpdf import FPDF
 
+
 class PDFDriver:
     def __init__(self, instruction):
         if not isinstance(instruction, dict):
@@ -11,7 +12,7 @@ class PDFDriver:
         self.__pdf = FPDF()
 
     def __text(self, text_object):
-        if not isinstance(text_object,  dict):
+        if not isinstance(text_object, dict):
             raise TypeError("text_object must be a string")
 
         text = text_object.get("text")
@@ -29,7 +30,7 @@ class PDFDriver:
         fontsize = text.get("fontsize")
         if not isinstance(fontsize, int):
             raise TypeError("fontsize must be a string")
-        self.__pdf.set_font("Arial", size=12)
+        self.__pdf.set_font("Arial", size=fontsize)
 
         size = text_object.get("size")
         if not isinstance(size, dict):
@@ -60,6 +61,27 @@ class PDFDriver:
 
         self.__pdf.cell(width, height, txt=value, ln=1, align=align)
 
+    def __image(self, image_object):
+        if not isinstance(image_object, dict):
+            raise TypeError("No image object given")
+
+        image_path = image_object['image']['source']
+        if not isinstance(image_path, str):
+            raise TypeError("No image source")
+
+        x, y = image_object['x'], image_object['y']
+        if not isinstance(x, int):
+            raise TypeError("x must be a int")
+        if not isinstance(y, int):
+            raise TypeError("y must be a int")
+        width, height = image_object['size']['width'], image_object['size']['height']
+        if not isinstance(width, int):
+            raise TypeError("width must be a int")
+        if not isinstance(height, int):
+            raise TypeError("height must be a int")
+
+        self.__pdf.image(image_path, x=x, y=y, w=width, h=height)
+
     def execute(self):
         pages = self.__instruction.get('pages')
 
@@ -82,6 +104,8 @@ class PDFDriver:
 
                 if object_type == "text":
                     self.__text(each)
+                elif object_type == "image":
+                    self.__image(each)
 
     def output(self, filename):
         self.__pdf.output(filename, 'F')
@@ -93,4 +117,4 @@ if __name__ == "__main__":
 
     pdf_object = PDFDriver(instruction)
     pdf_object.execute()
-    pdf_object.output("test.pdf")
+    pdf_object.output("test2.pdf")
