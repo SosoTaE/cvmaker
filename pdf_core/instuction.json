@@ -4,14 +4,26 @@
       "number": 1,
       "objects": [
         {
-          "x": 0,
-          "y": 0,
+          "x": 60,
+          "y": 10,
           "type": "text",
-          "align": "L",
+          "align": "l",
           "text": {
-            "value": "Hello there",
+            "value": "Soso Tavdgiridze",
             "fontname": "Arial",
-            "fontsize": 12
+            "fontsize": 24
+          },
+          "size": {
+            "width": 50,
+            "height": 50
+          }
+        },
+        {
+          "x": 10,
+          "y": 10,
+          "type": "image",
+          "image": {
+            "source": "soso.jpg"
           },
           "size": {
             "width": 50,
@@ -20,20 +32,66 @@
         },
         {
           "x": 0,
+          "y": 70,
+          "type": "rect",
+          "rect": {
+            "color": [225,0,0],
+            "fill": "F"
+          },
+          "size": {
+            "width": 500,
+            "height": 2
+          }
+        },
+        {
+          "x": 60,
           "y": 50,
-          "type": "text",
-          "align": "R",
+          "type": "rect",
+          "rect": {
+            "color": [225,1232,124],
+            "fill": "F"
+          },
+          "size": {
+            "width": 600,
+            "height": 10
+          }
+        },
+        {
+          "x": 60,
+          "y": 50,
+          "type": "multiline",
+          "align": "",
           "text": {
-            "value": "Hi there",
-            "fontname": "Arial",
-            "fontsize": 12
+            "value": "Hello World,\n\n I am a programmer of java, c, cpp, golang, python",
+            "fontsize": 20,
+            "fontname": "Arial"
           },
           "size": {
             "width": 50,
-            "height": 50
+            "height": 10
+          }
+        },
+        {
+          "type": "ln",
+          "ln": 10
+        },
+        {
+          "x": 60,
+          "y": 50,
+          "type": "multiline",
+          "align": "",
+          "text": {
+            "value": "Hello World,\n\n I am a programmer of java, c, cpp, golang, python",
+            "fontsize": 20,
+            "fontname": "Arial"
+          },
+          "size": {
+            "width": 50,
+            "height": 10
           }
         }
       ]
+
     }
 
   ]

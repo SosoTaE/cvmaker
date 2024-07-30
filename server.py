@@ -1,5 +1,6 @@
 # installed
 from flask import Flask
+from flask_cors import CORS
 
 # written by me
 from routes.registration import registration
@@ -9,8 +10,10 @@ from middlewares.verify import verifyAccessToken
 
 app = Flask(__name__)
 
+CORS(app, origins=["*"])
 
-@app.route("/", methods=["GET"])
+
+@app.route("/", methods=["GET", "OPTIONS"])
 def home():
     return "<h1>Hello World</h1>"
 
@@ -36,4 +39,4 @@ def Refresh():
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", 8000, threaded=True, debug=True)
+    app.run("192.168.100.8", 5000)
