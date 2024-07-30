@@ -61,7 +61,7 @@
 - **Method**: `POST`
 - **Authorization**: Required (Refresh Token)
 - **Description**: Refreshes an expired access token using a refresh token.
-- **Request Body**: {"refreshToken": "token"}
+- **Request Body**: {"refreshToken": "string"}
 - **Success Response**:
   - **Code**: 200
   - **Content**: `{ "accessToken": "new_access_token", "refreshToken": new_refresh_token }`
