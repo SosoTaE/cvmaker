@@ -9,7 +9,7 @@
           "type": "text",
           "align": "L",
           "text": {
-            "value": "soso tae",
+            "value": "Sulkhan Zoidze",
             "fontname": "Arial",
             "fontsize": 36
           },
@@ -20,13 +20,13 @@
         },
         {
           "x": 0,
-          "y": 50,
+          "y": 60,
           "type": "text",
           "align": "l",
           "text": {
-            "value": "gay mona",
+            "value": "Quiet Bully",
             "fontname": "Arial",
-            "fontsize": 128
+            "fontsize": 111
           },
           "size": {
             "width": 50,
@@ -38,7 +38,7 @@
           "y": 10,
           "type": "image",
           "image": {
-            "source": "soso.jpg"
+            "source": "sulk.jpeg"
           },
           "size": {
             "width": 50,

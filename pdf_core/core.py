@@ -65,22 +65,33 @@ class PDFDriver:
         if not isinstance(image_object, dict):
             raise TypeError("No image object given")
 
-        image_path = image_object['image']['source']
-        if not isinstance(image_path, str):
-            raise TypeError("No image source")
+        image = image_object.get("image")
+        if not isinstance(image, dict):
+            raise TypeError("image must be a dictionary")
 
-        x, y = image_object['x'], image_object['y']
+        source = image.get("source")
+        if not isinstance(source, str):
+            raise TypeError("source must be a string")
+
+        x = image_object.get("x")
         if not isinstance(x, int):
             raise TypeError("x must be a int")
+        y = image_object.get("y")
         if not isinstance(y, int):
             raise TypeError("y must be a int")
-        width, height = image_object['size']['width'], image_object['size']['height']
+
+        size = image_object.get("size")
+        if not isinstance(size, dict):
+            raise TypeError("size must be a dictionary")
+
+        width = size.get("width")
         if not isinstance(width, int):
             raise TypeError("width must be a int")
+        height = size.get("height")
         if not isinstance(height, int):
             raise TypeError("height must be a int")
 
-        self.__pdf.image(image_path, x=x, y=y, w=width, h=height)
+        self.__pdf.image(source, x=x, y=y, w=width, h=height)
 
     def execute(self):
         pages = self.__instruction.get('pages')

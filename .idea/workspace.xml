@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7fa95bec-3948-445e-9e5b-22c7f81a9bed" name="Changes" comment="fixed fontsize issue,&#10;added image function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/test.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_core/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_core/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf_core/instuction.json" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_core/instuction.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +66,7 @@
     &quot;Python.testing_cv_maker.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;nadara&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Nodar/Desktop/sou/cvmaker2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -79,6 +81,7 @@
       <recent name="D:\programming\projects\cvmaker\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nodar\Desktop\sou\cvmaker2\pdf_core" />
       <recent name="D:\programming\projects\cvmaker\pdf_core" />
     </key>
   </component>
@@ -92,6 +95,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -126,6 +130,10 @@
       <workItem from="1722264573440" duration="124000" />
       <workItem from="1722264707928" duration="6399000" />
       <workItem from="1722278183234" duration="495000" />
+      <workItem from="1722278745417" duration="709000" />
+      <workItem from="1722279703473" duration="926000" />
+      <workItem from="1722318130783" duration="310000" />
+      <workItem from="1722350674421" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="fixed fontsize issue&#10;added image function">
       <option name="closed" value="true" />
@@ -135,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722277385201</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed fontsize issue,&#10;added image function">
+      <option name="closed" value="true" />
+      <created>1722278807978</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722278807978</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,13 +182,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed fontsize issue&#10;added image function" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed fontsize issue&#10;added image function" />
+    <MESSAGE value="fixed fontsize issue,&#10;added image function" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed fontsize issue,&#10;added image function" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cvmaker$Flask__server_py_.coverage" NAME="Flask (server.py) Coverage Results" MODIFIED="1722267294756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/cvmaker2$core.coverage" NAME="core Coverage Results" MODIFIED="1722276217632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pdf_core" />
+    <SUITE FILE_PATH="coverage/cvmaker2$core.coverage" NAME="core Coverage Results" MODIFIED="1722354411571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pdf_core" />
     <SUITE FILE_PATH="coverage/cvmaker$cv_maker.coverage" NAME="cv_maker Coverage Results" MODIFIED="1722269541171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/routes" />
-    <SUITE FILE_PATH="coverage/cvmaker2$cvmaker.coverage" NAME="cvmaker Coverage Results" MODIFIED="1722274361008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cvmaker2$cvmaker.coverage" NAME="cvmaker Coverage Results" MODIFIED="1722279775404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/cvmaker$cvmaker.coverage" NAME="cvmaker Coverage Results" MODIFIED="1722264882103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/cvmaker$core.coverage" NAME="core Coverage Results" MODIFIED="1722271177890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pdf_core" />
     <SUITE FILE_PATH="coverage/cvmaker$testing_cv_maker.coverage" NAME="testing_cv_maker Coverage Results" MODIFIED="1722268851095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/routes" />
