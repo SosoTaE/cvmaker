@@ -1,14 +1,15 @@
 import json
-
-from fpdf import FPDF
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 class PDFDriver:
-    def __init__(self, instruction):
+    def __init__(self, instruction, output_file):
         if not isinstance(instruction, dict):
             raise TypeError("instruction must be a dictionary")
 
         self.__instruction = instruction
-        self.__pdf = FPDF()
+        self.__canvas = canvas.Canvas(output_file, pagesize=letter)
+        self.__canvas.translate(0, self.__canvas._pagesize[1])
 
     def __text(self, text_object):
         if not isinstance(text_object,  dict):
@@ -29,69 +30,19 @@ class PDFDriver:
         fontsize = text.get("fontsize")
         if not isinstance(fontsize, int):
             raise TypeError("fontsize must be a string")
-        self.__pdf.set_font("Arial", size=12)
+        self.__canvas.setFont(fontname, size=fontsize)
 
-        size = text_object.get("size")
-        if not isinstance(size, dict):
-            raise TypeError("size must be a dictionary")
-
-        width = size.get("width")
-        if not isinstance(width, int):
-            raise TypeError("width must be a int")
-
-        height = size.get("height")
-        if not isinstance(height, int):
-            raise TypeError("height must be a int")
-
-        x = text_object.get("x")
-        if not isinstance(x, int):
-            raise TypeError("x must be a int")
-
-        y = text_object.get("y")
-        if not isinstance(y, int):
-            raise TypeError("y must be a int")
-
-        # set coordinate for text object
-        self.__pdf.set_xy(x, y)
-
-        align = text_object.get("align")
-        if not isinstance(align, str):
-            raise TypeError("align must be a string")
-
-        self.__pdf.cell(width, height, txt=value, ln=1, align=align)
-
-    def __multi_line_text(self, text_object):
-        if not isinstance(text_object,  dict):
-            raise TypeError("text_object must be a dictionary")
-
-        text = text_object.get("text")
-        if not isinstance(text, dict):
-            raise TypeError("text must be a dictionary")
-
-        value = text.get("value")
-        if not isinstance(value, str):
-            raise TypeError("value must be a string")
-
-        fontname = text.get("fontname")
-        if not isinstance(fontname, str):
-            raise TypeError("fontname must be a string")
-
-        fontsize = text.get("fontsize")
-        if not isinstance(fontsize, int):
-            raise TypeError("fontsize must be a string")
-        self.__pdf.set_font("Arial", size=12)
-
-        size = text_object.get("size")
-        if not isinstance(size, dict):
-            raise TypeError("size must be a dictionary")
-
-        width = size.get("width")
-        if not isinstance(width, int):
-            raise TypeError("width must be a int")
-
-        height = size.get("height")
-        if not isinstance(height, int):
-            raise TypeError("height must be a int")
+        # size = text_object.get("size")
+        # if not isinstance(size, dict):
+        #     raise TypeError("size must be a dictionary")
+        #
+        # width = size.get("width")
+        # if not isinstance(width, int):
+        #     raise TypeError("width must be a int")
+        #
+        # height = size.get("height")
+        # if not isinstance(height, int):
+        #     raise TypeError("height must be a int")
 
         x = text_object.get("x")
         if not isinstance(x, int):
@@ -101,13 +52,7 @@ class PDFDriver:
         if not isinstance(y, int):
             raise TypeError("y must be a int")
 
-        # set coordinate for text object
-        self.__pdf.set_xy(x, y)
-
-        align = text_object.get("align")
-        if not isinstance(align, str):
-            raise TypeError("align must be a string")
-        self.__pdf.cell(width, height, txt=value, align=align)
+        self.__canvas.drawString(x, y, value)
 
     def __rect(self, rect_object):
         if not isinstance(rect_object, dict):
@@ -121,7 +66,7 @@ class PDFDriver:
         if not isinstance(color, list):
             raise TypeError("color must be a list")
 
-        self.__pdf.set_fill_color(color[0], color[1], color[2])
+        self.__canvas.setFillColorRGB(color[0], color[1], color[2], color[3])
 
         x = rect_object.get("x")
         if not isinstance(x, int):
@@ -144,17 +89,29 @@ class PDFDriver:
             raise TypeError("height must be a int")
 
         fill = rect.get("fill")
-        if not isinstance(fill, str):
-            raise TypeError("fill must be a string")
+        if not isinstance(fill, int):
+            raise TypeError("fill must be a intf")
 
-        self.__pdf.rect(x, y, width, height, fill)
+        self.__canvas.rect(x, y, width, height, fill=fill)
 
-    def __ln(self, ln_object):
-        ln = ln_object.get("ln")
-        if not isinstance(ln, int):
-            raise TypeError("ln must be a int")
+    def __line(self, line_object):
+        if not isinstance(line_object, dict):
+            raise TypeError("ln_object must be a dictionary")
 
-        self.__pdf.ln(ln)
+        coordinates = line_object.get("coordinates")
+        if not isinstance(coordinates, list):
+            raise TypeError("coordinates must be a list")
+
+        x1, y1, x2, y2 = coordinates
+
+        size = line_object.get("size")
+        if not isinstance(size, int):
+            raise TypeError("size must be a int")
+
+        self.__canvas.setLineWidth(size)
+        self.__canvas.line(x1, y1, x2, y2)
+
+
     def __image(self, image_object):
         if not isinstance(image_object, dict):
             raise TypeError("No image object given")
@@ -185,12 +142,15 @@ class PDFDriver:
         if not isinstance(height, int):
             raise TypeError("height must be a int")
 
-        self.__pdf.image(source, x=x, y=y, w=width, h=height)
+        self.__canvas.drawImage(source, x, y, width=width, height=height)
+
     def execute(self):
         pages = self.__instruction.get('pages')
 
         if not pages:
             raise ValueError("No objects found")
+
+
 
         for page in pages:
 
@@ -198,9 +158,6 @@ class PDFDriver:
 
             if not objects:
                 raise ValueError("No objects found")
-
-            # add page
-            self.__pdf.add_page()
 
             # draw objects
             for each in objects:
@@ -215,20 +172,19 @@ class PDFDriver:
                 if object_type == "rect":
                     self.__rect(each)
 
-                if object_type == "multiline":
-                    self.__multi_line_text(each)
+                if object_type == "line":
+                    self.__line(each)
 
-                if object_type == "ln":
-                    self.__ln(each)
+            self.__canvas.showPage()
 
-    def output(self, filename):
-        self.__pdf.output(filename, 'F')
+    def output(self):
+        self.__canvas.save()
 
 
 if __name__ == "__main__":
     with open("instuction.json", "r") as f:
         instruction = json.load(f)
 
-    pdf_object = PDFDriver(instruction)
+    pdf_object = PDFDriver(instruction, output_file="test.pdf")
     pdf_object.execute()
-    pdf_object.output("test.pdf")
+    pdf_object.output()

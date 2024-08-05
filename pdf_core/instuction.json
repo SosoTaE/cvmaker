@@ -7,15 +7,10 @@
           "x": 60,
           "y": 10,
           "type": "text",
-          "align": "l",
           "text": {
             "value": "Soso Tavdgiridze",
-            "fontname": "Arial",
+            "fontname": "Helvetica",
             "fontsize": 24
-          },
-          "size": {
-            "width": 50,
-            "height": 50
           }
         },
         {
@@ -35,8 +30,8 @@
           "y": 70,
           "type": "rect",
           "rect": {
-            "color": [225,0,0],
-            "fill": "F"
+            "color": [1,0.2,0.3, 0.5],
+            "fill": 1
           },
           "size": {
             "width": 500,
@@ -48,8 +43,8 @@
           "y": 50,
           "type": "rect",
           "rect": {
-            "color": [225,1232,124],
-            "fill": "F"
+            "color": [0.4,0.1,0.2, 0.5],
+            "fill": 1
           },
           "size": {
             "width": 600,
@@ -57,23 +52,9 @@
           }
         },
         {
-          "x": 60,
-          "y": 50,
-          "type": "multiline",
-          "align": "",
-          "text": {
-            "value": "Hello World,\n\n I am a programmer of java, c, cpp, golang, python",
-            "fontsize": 20,
-            "fontname": "Arial"
-          },
-          "size": {
-            "width": 50,
-            "height": 10
-          }
-        },
-        {
-          "type": "ln",
-          "ln": 10
+          "type": "line",
+          "coordinates": [0,0,50,50],
+          "size": 5
         },
         {
           "x": 60,
@@ -92,7 +73,23 @@
         }
       ]
 
+    },
+    {
+      "number": 2,
+      "objects": [
+        {
+          "x": 100,
+          "y": 500,
+          "type": "image",
+          "image": {
+            "source": "soso.jpg"
+          },
+          "size": {
+            "width": 500,
+            "height": 500
+          }
+        }
+      ]
     }
-
   ]
 }
