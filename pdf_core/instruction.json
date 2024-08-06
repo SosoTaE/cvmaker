@@ -1,0 +1,60 @@
+{
+  "pages": [
+    {
+      "number": 1,
+      "objects": [
+        {
+          "x": 0.0,
+          "y": 63.0,
+          "type": "rect",
+          "rect": {
+            "color": [0, 217, 217, 1],
+            "fill": 1
+          },
+          "size": {
+            "width": 595.0,
+            "height": 104.0
+          }
+        },
+        {
+          "x": 76.0,
+          "y": 75.0,
+          "type": "image",
+          "image": {
+            "source": "soso.jpg"
+          },
+          "size": {
+            "width": 110.0,
+            "height": 110.0
+          }
+        },
+        {
+          "type": "line",
+          "coordinates": [0,0,50,50],
+          "size": 5
+        },
+        {
+          "x": 240.0,
+          "y": 70.0,
+          "type": "multiline",
+          "text": {
+            "value": "Soso\nTavdgiridze",
+            "fontsize": 30,
+            "fontname": "Helvetica"
+          }
+
+        },
+        {
+          "x": 240.0,
+          "y": 167.0,
+          "type": "text",
+          "text": {
+            "value": "Back-shots Developer",
+            "fontname": "Helvetica",
+            "fontsize": 15
+          }
+        }
+      ]
+    }
+  ]
+}
