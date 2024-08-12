@@ -134,7 +134,13 @@ class PDFDriver:
         if not isinstance(y, float):
             raise TypeError("y must be a float")
 
+        self.__canvas.saveState()
+        path = self.__canvas.beginPath()
+        self.__canvas.setStrokeColorRGB(255, 255, 255, 0)
+        path.circle(x + width / 2, y + height / 2, width / 2)
+        self.__canvas.clipPath(path)
         self.__canvas.drawImage(source, x, y, width=width, height=height)
+        self.__canvas.restoreState()
 
     def __multiline(self, multiline_object):
         self.__canvas.setFillColorRGB(0, 0, 0, 1)
