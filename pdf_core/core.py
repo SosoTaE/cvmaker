@@ -24,6 +24,12 @@ class PDFDriver:
         if not isinstance(text, dict):
             raise TypeError("text must be a dictionary")
 
+        color = text.get("color")
+        if not isinstance(color, list) or len(color) != 4:
+            raise TypeError("color must be a list of 4 elements (RGBA)")
+        r, g, b, a = color[0] / 255, color[1] / 255, color[2] / 255, color[3]
+        self.__canvas.setFillColorRGB(r, g, b, a)
+
         value = text.get("value")
         if not isinstance(value, str):
             raise TypeError("value must be a string")
@@ -60,7 +66,8 @@ class PDFDriver:
         color = rect.get("color")
         if not isinstance(color, list) or len(color) != 4:
             raise TypeError("color must be a list of 4 elements (RGBA)")
-        self.__canvas.setFillColorRGB(*color)
+        r, g, b, a = color[0] / 255, color[1] / 255, color[2] / 255, color[3]
+        self.__canvas.setFillColorRGB(r, g, b, a)
 
         size = rect_object.get("size")
         if not isinstance(size, dict):
@@ -92,18 +99,19 @@ class PDFDriver:
         if not isinstance(line_object, dict):
             raise TypeError("ln_object must be a dictionary")
 
-        coordinates = line_object.get("coordinates")
-        if not isinstance(coordinates, list):
-            raise TypeError("coordinates must be a list")
-
-        x1, y1, x2, y2 = coordinates
-
         size = line_object.get("size")
         if not isinstance(size, int):
             raise TypeError("size must be a int")
 
+        x1 = line_object.get("x1")
+        if not isinstance(x1, float):
+            raise TypeError("x1 must be a float")
+        y1 = self.__relative_y(line_object.get("y1"), 0)
+        if not isinstance(y1, float):
+            raise TypeError("y1 must be a float")
+
         self.__canvas.setLineWidth(size)
-        self.__canvas.line(x1, y1, x2, y2)
+        self.__canvas.line(x1, y1, x1, y1)
 
     def __image(self, image_object):
         if not isinstance(image_object, dict):
@@ -152,6 +160,12 @@ class PDFDriver:
         if not isinstance(text, dict):
             raise TypeError("text must be a dictionary")
 
+        color = text.get("color")
+        if not isinstance(color, list) or len(color) != 4:
+            raise TypeError("color must be a list of 4 elements (RGBA)")
+        r, g, b, a = color[0] / 255, color[1] / 255, color[2] / 255, color[3]
+        self.__canvas.setFillColorRGB(r, g, b, a)
+
         value = text.get("value")
         if not isinstance(value, str):
             raise TypeError("value must be a string")
@@ -174,7 +188,7 @@ class PDFDriver:
         lines = value.split("\n")
 
         for line in lines:
-            y -= fontsize * 1.2
+            y -= fontsize * 1.2 + 1
             self.__canvas.drawString(x, y, line)
 
     def execute(self):

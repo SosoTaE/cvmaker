@@ -8,7 +8,7 @@
           "y": 63.0,
           "type": "rect",
           "rect": {
-            "color": [0, 217, 217, 1],
+            "color": [217, 217, 217, 1],
             "fill": 1
           },
           "size": {
@@ -21,7 +21,7 @@
           "y": 75.0,
           "type": "image",
           "image": {
-            "source": "soso.jpg"
+            "source": "img1.jpg"
           },
           "size": {
             "width": 110.0,
@@ -29,29 +29,258 @@
           }
         },
         {
-          "type": "line",
-          "coordinates": [0,0,50,50],
-          "size": 5
-        },
-        {
           "x": 240.0,
           "y": 70.0,
           "type": "multiline",
           "text": {
-            "value": "Soso\nTavdgiridze",
+            "color": [0, 0, 0, 1],
+            "value": "Nodar\nGundadze",
             "fontsize": 30,
             "fontname": "Helvetica"
           }
-
         },
         {
           "x": 240.0,
           "y": 167.0,
           "type": "text",
           "text": {
-            "value": "Back-shots Developer",
+            "color": [97, 97, 97, 1],
+            "value": "Universal Intern",
             "fontname": "Helvetica",
             "fontsize": 15
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 218.0,
+          "type": "image",
+          "image": {
+            "source": "img2.jpg"
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          }
+        },
+        {
+          "x": 70.0,
+          "y": 214.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "Date Of Birth",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 145.0,
+          "y": 217.0,
+          "type": "rect",
+          "rect": {
+            "color": [0, 0, 0, 1],
+            "fill": 1
+          },
+          "size": {
+            "width": 2.0,
+            "height": 12.0
+          }
+        },
+        {
+          "x": 157.0,
+          "y": 214.0,
+          "type": "text",
+          "text": {
+            "color": [97, 97, 97, 1],
+            "value": "20/07/2004",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 241.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "C O N T A C T",
+            "fontname": "Helvetica",
+            "fontsize": 15
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 271.0,
+          "type": "image",
+          "image": {
+            "source": "img2.jpg"
+          },
+          "size": {
+            "width": 20.0,
+            "height": 20.0
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 301.0,
+          "type": "image",
+          "image": {
+            "source": "img2.jpg"
+          },
+          "size": {
+            "width": 20.0,
+            "height": 20.0
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 331.0,
+          "type": "image",
+          "image": {
+            "source": "img2.jpg"
+          },
+          "size": {
+            "width": 20.0,
+            "height": 20.0
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 361.0,
+          "type": "image",
+          "image": {
+            "source": "img2.jpg"
+          },
+          "size": {
+            "width": 20.0,
+            "height": 20.0
+          }
+        },
+        {
+          "x": 80.0,
+          "y": 272.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "571 60 38 38",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 80.0,
+          "y": 302.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "nodarrgundadze@gmail.com",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 80.0,
+          "y": 332.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "Batumi, Tabidze 19a",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 80.0,
+          "y": 362.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "github.com/EmptyBlankCode",
+            "fontname": "Helvetica",
+            "fontsize": 11
+          }
+        },
+        {
+          "x": 288.0,
+          "y": 214.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "P R O F I L E",
+            "fontname": "Helvetica",
+            "fontsize": 15
+          }
+        },
+        {
+          "x": 288.0,
+          "y": 245.0,
+          "type": "rect",
+          "rect": {
+            "color": [0, 0, 0, 1],
+            "fill": 1
+          },
+          "size": {
+            "width": 2.0,
+            "height": 68.0
+          }
+        },
+        {
+          "x": 303.0,
+          "y": 246.0,
+          "type": "multiline",
+          "text": {
+            "color": [97, 97, 97, 1],
+            "value": "I am a good timekeeper, always willing to learn \nnew skills. I am friendly, helpful and polite, \nhave a good sense of humour. I am able to work \nindependently in busy environments and also \nwithin a team setting.",
+            "fontsize": 9,
+            "fontname": "Helvetica"
+          }
+        },
+        {
+          "x": 288.0,
+          "y": 338.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "E X P E R I E N C E",
+            "fontname": "Helvetica",
+            "fontsize": 15
+          }
+        },
+        {
+          "x": 288.0,
+          "y": 369.0,
+          "type": "rect",
+          "rect": {
+            "color": [0, 0, 0, 1],
+            "fill": 1
+          },
+          "size": {
+            "width": 2.0,
+            "height": 340.0
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 395.0,
+          "type": "text",
+          "text": {
+            "color": [0, 0, 0, 1],
+            "value": "E D U C A T I O N",
+            "fontname": "Helvetica",
+            "fontsize": 15
+          }
+        },
+        {
+          "x": 50.0,
+          "y": 426.0,
+          "type": "rect",
+          "rect": {
+            "color": [0, 0, 0, 1],
+            "fill": 1
+          },
+          "size": {
+            "width": 2.0,
+            "height": 117.0
           }
         }
       ]
