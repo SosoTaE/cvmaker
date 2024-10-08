@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fa95bec-3948-445e-9e5b-22c7f81a9bed" name="Changes" comment="reportlab">
-      <change afterPath="$PROJECT_DIR$/routes/getProfessions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/getUniversities.py" afterDir="false" />
+    <list default="true" id="7fa95bec-3948-445e-9e5b-22c7f81a9bed" name="Changes" comment="professions and universities">
+      <change afterPath="$PROJECT_DIR$/routes/get_cvs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garbage/pdf_testing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mupdf/fonts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mupdf/json_example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mupdf/new_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mupdf/rect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/instuction.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/learning_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/soso.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_core/test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/cv_maker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/json_example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/my_cv.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/simple_text.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/testing_cv_maker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/verify.py" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/verify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="package.json" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -76,30 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flask server.Flask (server.py).executor": "Run",
-    "Python.GetUniversities.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.core.executor": "Run",
-    "Python.cv_maker.executor": "Run",
-    "Python.cvmaker.executor": "Run",
-    "Python.getProfessions.executor": "Run",
-    "Python.json_parser.executor": "Run",
-    "Python.parse_website.executor": "Run",
-    "Python.testing.executor": "Run",
-    "Python.testing_cv_maker.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/programming/projects/cvmaker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flask server.Flask (server.py).executor&quot;: &quot;Run&quot;,
+    &quot;Python.GetUniversities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.core.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cv_maker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cvmaker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.getProfessions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_parser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parse_website.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing_cv_maker.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/programming/projects/cvmaker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\programming\projects\cvmaker" />
@@ -109,7 +90,7 @@
       <recent name="D:\programming\projects\cvmaker\pdf_core" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flask server.Flask (server.py)">
     <configuration name="cvmaker" type="PythonConfigurationType" factoryName="Python">
       <module name="cvmaker" />
       <option name="ENV_FILES" value="" />
@@ -183,7 +164,9 @@
       <workItem from="1726932383884" duration="5000" />
       <workItem from="1726932398230" duration="39000" />
       <workItem from="1726932836338" duration="60000" />
-      <workItem from="1727521895275" duration="4745000" />
+      <workItem from="1727521895275" duration="10396000" />
+      <workItem from="1728200590008" duration="81000" />
+      <workItem from="1728409914745" duration="2406000" />
     </task>
     <task id="LOCAL-00001" summary="core class">
       <option name="closed" value="true" />
@@ -225,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722886811470</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="professions and universities">
+      <option name="closed" value="true" />
+      <created>1727543963699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727543963699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +238,8 @@
     <MESSAGE value="image and multiline methods" />
     <MESSAGE value="update refresh route documentation" />
     <MESSAGE value="reportlab" />
-    <option name="LAST_COMMIT_MESSAGE" value="reportlab" />
+    <MESSAGE value="professions and universities" />
+    <option name="LAST_COMMIT_MESSAGE" value="professions and universities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,7 +251,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/server.py</url>
-          <line>44</line>
+          <line>54</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -271,13 +263,18 @@
           <line>10</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/middlewares/verify.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cvmaker$json_parser.coverage" NAME="json_parser Coverage Results" MODIFIED="1727540147901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cvmaker$testing.coverage" NAME="testing Coverage Results" MODIFIED="1722884567036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cvmaker$Flask__server_py_.coverage" NAME="Flask (server.py) Coverage Results" MODIFIED="1727543886657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/cvmaker$Flask__server_py_.coverage" NAME="Flask (server.py) Coverage Results" MODIFIED="1728412352228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cvmaker$GetUniversities.coverage" NAME="GetUniversities Coverage Results" MODIFIED="1727541194994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/routes" />
     <SUITE FILE_PATH="coverage/cvmaker$parse_website.coverage" NAME="parse_website Coverage Results" MODIFIED="1727543582721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cvmaker$cvmaker.coverage" NAME="cvmaker Coverage Results" MODIFIED="1722354559552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

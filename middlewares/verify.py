@@ -28,7 +28,7 @@ def verifyAccessToken():
         response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
         return response
 
-    route = request.url_rule.rule
+    route = request.url_rule.rule if request.url_rule else None
 
     if route in routes_object:
         return
