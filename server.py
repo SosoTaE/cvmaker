@@ -7,7 +7,7 @@ from routes.registration import registration
 from routes.login import login
 from routes.refresh import refresh
 from routes.get_cvs import get_cvs
-from routes.save_csv import save_cvs
+from routes.save_cvs import save_cvs
 from middlewares.verify import verifyAccessToken
 from routes.getUniversities import getUniversities
 from routes.getProfessions import getProfessions
